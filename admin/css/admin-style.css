@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('../asset/img/background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.container {
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+#admin-name {
+    margin-right: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e9ecef;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button {
+    padding: 10px 15px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-left: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+table tr:hover {
+    background: #e2e6ea;
+}
+
+table td.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+button.edit-button,
+button.delete-button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button.edit-button {
+    background: #28a745;
+}
+
+button.edit-button:hover {
+    background: #218838;
+    transform: scale(1.1);
+}
+
+button.delete-button {
+    background: #dc3545;
+}
+
+button.delete-button:hover {
+    background: #c82333;
+    transform: scale(1.1);
+}
+
+form.edit-form,
+form.new-entry-form {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px 10px;
+    background: #ffffff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.field-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-wrapper label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form input[type="time"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form input[type="date"]:focus,
+form input[type="time"]:focus {
+    border-color: #007bff;
+}
+
+form .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    grid-column: 1 / -1;
+}
+
+form button {
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+form button.save-button {
+    background: #28a745;
+}
+
+form button.save-button:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+form button.cancel-button {
+    background: #6c757d;
+}
+
+form button.cancel-button:hover {
+    background: #5a6268;
+    transform: scale(1.05);
+}
+
+.stats-container {
+    margin-top: 30px;
+}
+
+.stats-container select,
+.stats-container button {
+    margin-right: 10px;
+}
+
+#stats-container {
+    margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

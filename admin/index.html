@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="icon" href="/asset/img/logo-cineapp.jpg" type="image/jpg">
+    <link rel="stylesheet" type="text/css" href="css/admin-style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <img src="/asset/img/logo-cineapp.jpg" alt="Logo" class="logo">
+                <h1>Admin Dashboard</h1>
+            </div>
+            <div class="header-right">
+                <span id="admin-name">Admin: <!-- Nama Admin akan dimasukkan di sini --></span>
+                <select id="table-select">
+                    <option value="">Pilih Tabel</option>
+                    <option value="user">User</option>
+                    <option value="film">Film</option>
+                    <option value="jadwal">Jadwal</option>
+                    <option value="ruangan">Ruangan</option>
+                    <option value="book">Book</option>
+                </select>
+                <button onclick="loadTable()">Pilih</button>
+                <button onclick="logout()">Log Out</button>
+            </div>
+        </header>
+        <main>
+            <div id="table-container"></div>
+            <div id="new-entry-container" style="display: none;">
+                <button onclick="showNewEntryForm()">Tambah Data</button>
+                <form id="new-entry-form" class="new-entry-form">
+                    <!-- Form fields will be dynamically generated here -->
+                </form>
+            </div>
+            <div class="stats-container">
+                <select id="stats-select">
+                    <option value="daily-audience">Jumlah Penonton Harian</option>
+                    <option value="film-audience">Jumlah Penonton per Film</option>
+                    <option value="revenue-growth">Pertumbuhan Revenue Bioskop</option>
+                </select>
+                <button onclick="loadStats()">Tampilkan Statistik</button>
+                <div id="stats-container">
+                    <canvas id="stats-chart"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/admin-script.js"></script>
+    <script>
+        // Simpan nama admin ke elemen dengan id "admin-name"
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/api/admin-name')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('admin-name').textContent = `Admin: ${data.name}`;
+                })
+                .catch(error => console.error('Error fetching admin name:', error));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DAFTAR CINEAPP</title>
+        <link rel="icon" href="/asset/img/logo-cineapp.jpg" type="image/jpg">
+        <link rel="stylesheet" type="text/css" href="css/register.css">
+    </head>
+    <body onload="document.getElementById('registerForm').reset();">
+        <div class="container">
+            <div class="register-container">
+                <div class="logo-container">
+                    <img src="/asset/img/logo-cineapp.jpg" alt="Logo" class="logo">
+                    <h1>DAFTAR CINEAPP</h1>
+                </div>
+                <form id="registerForm" name="registerForm">
+                    <div class="input-group">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="submit" value="Daftar">
+                    </div>
+                </form>
+                <div id="error-message" class="error-message"></div>
+                <p>Sudah Punya Akun? <a href="/login">Login Di Sini</a></p>
+                <hr>
+                <p>&copy; 2024 Sebastianus Lukito</p>
+            </div>
+        </div>
+        <script src="js/register.js"></script>
+    </body>
+</html>

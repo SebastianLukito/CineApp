@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LOGIN CINEAPP</title>
+    <link rel="icon" href="/asset/img/logo-cineapp.jpg" type="image/jpg">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body onload="document.getElementById('loginForm').reset();">
+    <div class="container">
+        <div class="login-container">
+            <div class="logo-container">
+                <img src="/asset/img/logo-cineapp.png" alt="Logo" class="logo">
+                <h1>LOGIN CINEAPP</h1>
+            </div>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <input type="submit" value="Masuk">
+                </div>
+            </form>
+            <div id="error-message" class="error-message"></div>
+            <p>Belum Punya Akun? <a href="/register">Daftar Di Sini</a></p>
+            <hr>
+            <div>
+                <a href="/auth/google" class="google-login">
+                    <img src="/asset/img/google-logo.png" alt="Google Logo"> Login with Google
+                </a>
+            </div>
+            <p>&copy; 2024 Sebastianus Lukito</p>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>

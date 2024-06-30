@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Pembayaran - CineApp</title>
+    <link rel="icon" href="/asset/img/logo-cineapp.jpg" type="image/jpg">
+    <link rel="stylesheet" href="css/bayar.css">
+    <script src="js/bayar.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="/asset/img/logo-cineapp.png" alt="Logo" class="logo">
+                <h1>CINEAPP</h1>
+            </div>
+            <button id="login-button" onclick="location.href='/login'">Login</button>
+        </div>
+        <div class="marquee">
+            <marquee>Selamat datang di CineApp! Nikmati pengalaman menonton film terbaik!</marquee>
+        </div>
+    </header>
+    <main>
+        <div id="payment-details">
+            <h2>Detail Pembayaran</h2>
+            <p><strong>Film:</strong> <span id="film-title"></span></p>
+            <p><strong>Jadwal:</strong> <span id="schedule"></span></p>
+            <p><strong>Nomor Kursi:</strong> <span id="seat-numbers"></span></p>
+            <p><strong>Harga Tiket:</strong> Rp <span id="ticket-price"></span></p>
+            <div class="payment-method">
+                <label for="payment-method">Metode Pembayaran:</label>
+                <select id="payment-method">
+                    <option value="BCA m-banking">BCA m-banking</option>
+                    <option value="Shopeepay">Shopeepay</option>
+                    <option value="OVO">OVO</option>
+                </select>
+            </div>
+            <button id="pay-button">Bayar</button>
+        </div>
+    </main>
+    <footer>
+        <p>&&copy; 2024 Sebastianus Lukito</p>
+    </footer>
+</body>
+</html>
