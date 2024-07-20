@@ -1,7 +1,8 @@
-# Web Tiket Bioskop 
+# Web Tiket Bioskop
 
-This project is a web application for booking movie tickets and Final Exam of Web Programming built by:
-Sebastianus Lukito (41522110051)
+![Logo](images/logo.png)
+
+This project is a web application for booking movie tickets.
 
 ## Prerequisites
 
@@ -44,12 +45,73 @@ Before you begin, ensure you have met the following requirements:
 ## Database Setup
 
 1. Ensure your MySQL (or specified database) is running.
-2. Create the necessary database and tables. You can use a tool like MySQL Workbench or the command line to execute SQL scripts that create the required database schema. Example:
+2. Create the necessary database:
     ```sql
-    CREATE DATABASE webTiketBioskop;
+    CREATE DATABASE movie_booking;
+    USE movie_booking;
     ```
 
-3. Update the `.env` file with your database credentials.
+3. Create the required tables:
+    ```sql
+    -- Create table for bookings
+    CREATE TABLE book (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        user_id INT(11) DEFAULT NULL,
+        jadwal_id INT(11) DEFAULT NULL,
+        jumlah_tiket INT(11) DEFAULT NULL,
+        tanggal_booking TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (id),
+        KEY user_id (user_id),
+        KEY jadwal_id (jadwal_id)
+    );
+
+    -- Create table for films
+    CREATE TABLE film (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        judul VARCHAR(255) NOT NULL,
+        deskripsi TEXT DEFAULT NULL,
+        durasi INT(11) DEFAULT NULL,
+        rilis DATE DEFAULT NULL,
+        harga_tiket DECIMAL(10,2) NOT NULL,
+        poster_filename VARCHAR(255) DEFAULT NULL,
+        PRIMARY KEY (id)
+    );
+
+    -- Create table for schedules
+    CREATE TABLE jadwal (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        film_id INT(11) DEFAULT NULL,
+        ruangan_id INT(11) DEFAULT NULL,
+        tanggal DATE DEFAULT NULL,
+        waktu TIME DEFAULT NULL,
+        PRIMARY KEY (id),
+        KEY film_id (film_id),
+        KEY ruangan_id (ruangan_id)
+    );
+
+    -- Create table for rooms
+    CREATE TABLE ruangan (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        nama VARCHAR(255) NOT NULL,
+        PRIMARY KEY (id)
+    );
+
+    -- Create table for users
+    CREATE TABLE user (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        username VARCHAR(255) NOT NULL,
+        password VARCHAR(255) NOT NULL,
+        type ENUM('admin','user') NOT NULL,
+        first_name VARCHAR(255) NOT NULL,
+        last_name VARCHAR(255) NOT NULL,
+        email VARCHAR(255) NOT NULL,
+        facebook_id VARCHAR(255) DEFAULT NULL,
+        google_id VARCHAR(255) DEFAULT NULL,
+        PRIMARY KEY (id)
+    );
+    ```
+
+4. Update the `.env` file with your database credentials.
 
 ## Usage
 
