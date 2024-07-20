@@ -1,6 +1,6 @@
 # Web Tiket Bioskop
 
-![Logo](images/logo.png)
+<img src="images/logo.png" alt="Logo" width="200"/>
 
 This project is a web application for booking movie tickets.
 
