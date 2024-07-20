@@ -1,8 +1,9 @@
 # Web Tiket Bioskop
 
-<img src="images/logo.png" alt="Logo" width="200"/>
+<img src="readme/mainmenu.jpg" alt="Main Menu" width="300"/>
 
-This project is a web application for booking movie tickets.
+This project is a web application for booking movie tickets and for final test of web programming built by:
+Sebastianus Lukito (41522110051)
 
 ## Prerequisites
 
@@ -116,6 +117,29 @@ Before you begin, ensure you have met the following requirements:
 ## Usage
 
 Open your browser and go to `http://localhost:<your-server-port>` to access the application.
+
+## Screenshots
+
+### Main Menu
+<img src="readme/mainmenu.jpg" alt="Main Menu" width="300"/>
+
+### Login Page
+<img src="readme/loginpage.jpg" alt="Login Page" width="300"/>
+
+### Registration Page
+<img src="readme/registrationpage.jpg" alt="Registration Page" width="300"/>
+
+### Ticket Purchase
+<img src="readme/belitiket.jpg" alt="Ticket Purchase" width="300"/>
+
+### Seat Selection
+<img src="readme/pilihkursi.jpg" alt="Seat Selection" width="300"/>
+
+### Payment
+<img src="readme/pembayaran.jpg" alt="Payment" width="300"/>
+
+### Ticket
+<img src="readme/tiket.jpg" alt="Ticket" width="300"/>
 
 ## Directory Structure
 
